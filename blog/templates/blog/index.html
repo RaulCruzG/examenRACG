@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Examen RACG</title>
+        <link rel="icon" href="../static/img/logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}"> 
+    </head>
+
+    <body>
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="../static/img/logo.png" alt="Logo" width="50" height="44" class="d-inline-block align-text">
+                ALGORITMOS DE CLASIFICACIÓN V9
+              </a>
+            </div>
+        </nav>
+        <div class="content container">
+            <div class="col-lg-10 mx-auto">
+                <table class="table table-success table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Variable 1</th>
+                            <th scope="col">Variable 2</th>
+                            <th scope="col">Variable 3</th>
+                            <th scope="col">Variable 4</th>
+                            <th scope="col">Sumatoria</th>
+                        </tr>
+                    </thead>
+                    {% for var, suma in contexto %}
+                        <tbody>
+                            <tr>
+                                <td>{{var.var1}}</td>
+                                <td>{{var.var2}}</td>
+                                <td>{{var.var3}}</td>
+                                <td>{{var.var4}}</td>
+                                <td>{{suma}}</td>
+                            </tr>
+                        </tbody>
+                    {% endfor %}         
+                </table>        
+            </div>
+        </div>
+        <footer class="bg-light text-center text-lg-start">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <p class="text-dark" href="https://mdbootstrap.com/">© 2022 Copyright: RAUL ALEJANDRO CRUZ GARCIA</p>
+            </div>
+          </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </body>
+</html>
